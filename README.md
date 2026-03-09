@@ -1,36 +1,74 @@
-# Rspack project
+# Academia Shozam — Landing Page
 
-## Setup
+Landing page para **Academia Shozam**, academia de artes marciales mixtas (MMA). Diseño oscuro con acento verde, totalmente responsive y con animaciones de navegación suaves.
 
-Install the dependencies:
+![Preview](./docs/preview.png)
+
+---
+
+## Páginas
+
+| Ruta | Descripción |
+|---|---|
+| `/` | Inicio — Hero, estadísticas, llamado a la acción |
+| `/courses` | Cursos disponibles |
+| `/teachers` | Equipo de instructores |
+| `/schedule` | Horarios de clases |
+| `/events` | Próximos eventos y torneos |
+| `/pricing` | Planes y precios |
+| `/about` | Quiénes somos |
+| `/location` | Ubicación e información de contacto |
+| `/contact` | Formulario de contacto |
+
+## Tech Stack
+
+- **React 19** + **TypeScript**
+- **Tailwind CSS v4**
+- **React Router v7**
+- **Radix UI** (componentes accesibles)
+- **Lucide React** (iconos)
+- **Rspack** (bundler)
+
+## Instalación
 
 ```bash
-npm install
+# Clonar el repositorio
+git clone <repo-url>
+cd Landing_Page_Academia_Shozam
+
+# Instalar dependencias
+pnpm install
+
+# Correr en desarrollo
+pnpm dev
 ```
 
-## Get started
-
-Start the dev server, and the app will be available at <http://localhost:8080>.
+## Scripts
 
 ```bash
-npm run dev
+pnpm dev      # Servidor de desarrollo (http://localhost:8080)
+pnpm build    # Build de producción
+pnpm preview  # Preview del build
+pnpm lint     # Lint con ESLint
+pnpm format   # Formatear con Prettier
 ```
 
-Build the app for production:
+## Requisitos
 
-```bash
-npm run build
+- Node.js ≥ 20
+- pnpm
+
+## Estructura
+
 ```
-
-Preview the production build locally:
-
-```bash
-npm run preview
+src/
+├── assets/          # Imágenes y recursos
+├── components/
+│   └── ui/          # Componentes reutilizables (Button, Sheet…)
+├── hooks/           # Custom hooks
+├── lib/             # Utilidades
+├── pages/           # Páginas de la app
+├── App.tsx
+├── main.tsx
+└── index.css        # Estilos globales + Tailwind
 ```
-
-## Learn more
-
-To learn more about Rspack, check out the following resources:
-
-- [Rspack documentation](https://rspack.rs) - explore Rspack features and APIs.
-- [Rspack GitHub repository](https://github.com/web-infra-dev/rspack) - your feedback and contributions are welcome!

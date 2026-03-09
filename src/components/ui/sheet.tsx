@@ -24,7 +24,7 @@ export function SheetContent({
       <Dialog.Overlay className="fixed inset-0 bg-black/40" />
       <Dialog.Content
         className={cn(
-          'fixed inset-y-0 right-0 z-50 p-6 w-80 bg-white shadow-xl outline-none',
+          'fixed inset-y-0 right-0 z-50 p-6 w-80 bg-[hsl(var(--muted))] shadow-xl outline-none',
           className,
         )}
       >
