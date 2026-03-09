@@ -2,15 +2,41 @@
 .DS_Store
 *.local
 *.log*
+Thumbs.db
+
+# Environment variables
+.env
+.env.*
+!.env.example
 
 # Dist
 node_modules
 dist/
 
+# Cache
+.cache/
+.eslintcache
+.prettiercache
+*.tsbuildinfo
+
 # Profile
 .rspack-profile-*/
+
+# Coverage
+coverage/
+
+# Backup files
+*.bak
+*.orig
 
 # IDE
 .vscode/*
 !.vscode/extensions.json
 .idea
+*.swp
+*.swo
+
+# Claude / AI agents
+.claude/
+AGENTS.md
+CLAUDE.md
