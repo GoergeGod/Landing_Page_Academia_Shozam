@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 160 30% 6%;
+    /* fondo muy oscuro verdoso */
+    --foreground: 160 15% 96%;
+    /* texto claro */
+    --muted: 160 25% 12%;
+    --muted-foreground: 160 8% 70%;
+    --border: 160 15% 18%;
+    --accent: 160 60% 35%;
+    /* verde oscuro principal */
+  }
+
+  * {
+    @apply border-neutral-200;
+  }
+
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
+    background-image: radial-gradient(60rem 30rem at 20% -10%, rgba(30, 131, 99, 0.35), transparent),
+      radial-gradient(60rem 30rem at 80% -10%, rgba(30, 131, 99, 0.3), transparent),
+      radial-gradient(50rem 40rem at 50% 100%, rgba(30, 131, 99, 0.15), transparent);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+
+  /* Fade in animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Animation classes */
+  .animate-fade-in {
+    animation: fadeIn 0.35s ease-out forwards;
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-right {
+    animation: fadeInRight 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  /* Delay utilities */
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .delay-600 {
+    animation-delay: 600ms;
+  }
+
+  /* Initial state for animations */
+  .animate-fade-in,
+  .animate-fade-in-left,
+  .animate-fade-in-right,
+  .animate-fade-in-up,
+  .animate-scale-in {
+    opacity: 0;
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .hover-glow {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(126, 34, 206, 0.4);
+  }
+}
